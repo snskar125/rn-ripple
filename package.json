@@ -1,0 +1,21 @@
+{
+  "name": "@snskar125/rn-ripple",
+  "version": "1.0.0",
+  "description": "Ripple Effect Component for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ripple",
+    "touchable",
+    "react",
+    "native",
+    "wave",
+    "splash",
+    "android",
+    "ios"
+  ],
+  "author": "snskar125",
+  "license": "ISC"
+}
