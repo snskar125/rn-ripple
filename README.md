@@ -47,6 +47,6 @@ const styles = StyleSheet.create({
 | Prop        | Type                               |
 | ----------- | ---------------------------------- |
 | rippleColor | String (Use RGBA for Transparency) |
-| foreground  | Boolean                            |
+| foreground  | Boolean (Ripple Position)          |
 
 All TouchableWithoutFeedback Props

@@ -17,12 +17,17 @@ class Ripple extends PureComponent {
     this.animation = new Animated.Value(0);
   }
   componentDidMount() {
-    const { remove } = this.props;
+    const { parent, id } = this.props;
     Animated.timing(this.animation, {
       toValue: 1,
       duration: 750,
       useNativeDriver: true,
-    }).start(remove);
+    }).start(() => {
+      parent.setState((prev) => ({
+        ...prev,
+        ripples: prev.ripples.filter((ripple) => ripple.id !== id),
+      }));
+    });
   }
   render() {
     const { color, x, y } = this.props;
@@ -85,15 +90,11 @@ export default class TouchableRipple extends PureComponent {
           {this.state.ripples.map((r) => (
             <Ripple
               key={r.id}
+              id={r.id}
               x={r.x}
               y={r.y}
               color={rippleColor}
-              remove={() => {
-                this.setState((prev) => ({
-                  ...prev,
-                  ripples: prev.ripples.filter((ripple) => ripple.id !== r.id),
-                }));
-              }}
+              parent={this}
             />
           ))}
           {!foreground ? children : null}
