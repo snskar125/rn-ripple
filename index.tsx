@@ -68,7 +68,7 @@ class Ripple extends PureComponent<RippleProps> {
 interface TouchableRippleProps extends TouchableWithoutFeedbackProps {
   style?: ViewStyle;
   rippleColor?: string;
-  onPressIn?: (e: any) => void;
+  onPressIn?: (event: any) => void;
   background?: boolean;
   children?: ReactElement;
 }
@@ -119,7 +119,7 @@ export default class TouchableRipple extends PureComponent<
       <TouchableWithoutFeedback {...rest} onPressIn={this.handlePressIn}>
         <View
           pointerEvents="box-only"
-          style={StyleSheet.compose(styles.container, style)}
+          style={StyleSheet.compose(style, styles.container)}
         >
           {!background ? children : null}
           {this.state.ripples.map((r) => (
