@@ -2,6 +2,7 @@ import React, { PureComponent, ReactElement } from "react";
 import {
   Animated,
   Dimensions,
+  GestureResponderEvent,
   StyleSheet,
   TouchableWithoutFeedback,
   TouchableWithoutFeedbackProps,
@@ -68,7 +69,7 @@ class Ripple extends PureComponent<RippleProps> {
 interface TouchableRippleProps extends TouchableWithoutFeedbackProps {
   style?: ViewStyle;
   rippleColor?: string;
-  onPressIn?: (event: any) => void;
+  onPressIn?: (event: GestureResponderEvent) => void;
   background?: boolean;
   children?: ReactElement;
 }
