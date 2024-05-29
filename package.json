@@ -1,8 +1,8 @@
 {
   "name": "@snskar125/rn-ripple",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Ripple Effect Component for React Native",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
