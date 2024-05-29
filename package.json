@@ -1,6 +1,6 @@
 {
   "name": "@snskar125/rn-ripple",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ripple Effect Component for React Native",
   "main": "index.js",
   "scripts": {

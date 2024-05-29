@@ -8,7 +8,7 @@ import {
 } from "react-native";
 
 const { height, width } = Dimensions.get("window");
-const INITIAL_RIPPLE_SIZE = 10;
+const INITIAL_RIPPLE_SIZE = 25;
 const MAX_SCALE = Math.floor(Math.max(height, width) / INITIAL_RIPPLE_SIZE);
 
 class Ripple extends PureComponent {
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
 });
 
 TouchableRipple.defaultProps = {
-  rippleColor: "rgba(0,0,0,0.25)",
+  rippleColor: "rgba(0,0,0,0.1)",
   onPressIn: () => {},
   children: null,
   style: {},
